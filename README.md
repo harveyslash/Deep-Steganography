@@ -18,6 +18,10 @@ pip install --force-reinstall tensorflow-gpu
 ```
 This basically reinstalls the gpu version of tensorflow for your system. 
 
+## Architecture 
+![network_design](_images/network_diagram.png)
+Prep Net, Hide Net , and Reveal net have the same convolutional block structure. Therefore, in the image , only the reveal network is shown, and prep/hide networks are collapsed (to make the image fit).  
+
 ### Currently a WIP(I only have a measly 1070 and results/benchmarks are taking time :( ) 
 
 The Framework takes in Two images. One is the secret image(extreme right) and another is the cover image(extreme left). 
