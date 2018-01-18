@@ -20,4 +20,13 @@ This basically reinstalls the gpu version of tensorflow for your system.
 
 ### Currently a WIP(I only have a measly 1070 and results/benchmarks are taking time :( ) 
 
+The Framework takes in Two images. One is the secret image(extreme right) and another is the cover image(extreme left). 
 
+The goal is to 'hide' the secret image in the cover image such that only the cover image is visible. This is the covered image(Center Left)
+
+Then , this hidden image can be passed to a Revealing network, which can get the hidden image back(Center Right).
+
+
+
+![Current System State](_images/current_state.png)
+As you can see, it is visually very hard to realise that the covered image is an image that has been tampered with. Yet the Reveal network can get back almost all of the important parts of the image. 
