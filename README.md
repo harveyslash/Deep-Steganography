@@ -18,12 +18,11 @@ pip install --force-reinstall tensorflow-gpu
 ```
 This basically reinstalls the gpu version of tensorflow for your system. 
 
-## Architecture 
-![network_design](_images/network_diagram.png)
-Prep Net, Hide Net , and Reveal net have the same convolutional block structure. Therefore, in the image , only the reveal network is shown, and prep/hide networks are collapsed (to make the image fit).  
 
 ### Currently a WIP(I only have a measly 1070 and results/benchmarks are taking time :( ) 
 
+
+## Framework
 The Framework takes in Two images. One is the secret image(extreme right) and another is the cover image(extreme left). 
 
 The goal is to 'hide' the secret image in the cover image such that only the cover image is visible. This is the covered image(Center Left)
@@ -34,3 +33,8 @@ Then , this hidden image can be passed to a Revealing network, which can get the
 
 ![Current System State](_images/current_state.png)
 As you can see, it is visually very hard to realise that the covered image is an image that has been tampered with. Yet the Reveal network can get back almost all of the important parts of the image. 
+
+
+### Architecture 
+![network_design](_images/network_diagram.png)
+Prep Net, Hide Net , and Reveal net have the same convolutional block structure. Therefore, in the image , only the reveal network is shown, and prep/hide networks are collapsed (to make the image fit).  
