@@ -1,0 +1,4 @@
+- step:
+    name: Hardware check
+    image: gcr.io/tensorflow/tensorflow:0.12.1-devel-gpu
+    command: nvidia-smi
