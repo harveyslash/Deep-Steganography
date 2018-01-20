@@ -1,4 +1,6 @@
 - step:
     name: Hardware check
     image: gcr.io/tensorflow/tensorflow:1.4.1-gpu-py3
-    command: nvidia-smi
+    command: 
+        - nvidia-smi
+        - python --version
