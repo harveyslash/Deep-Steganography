@@ -8,5 +8,6 @@
         - nvidia-smi
         - python --version
         - tar -xf /valohai/inputs/training-set-images/imagenet-sample-train.tar.gz
+        - touch /valohai/inputs/testging ; ls /valohai/inputs
         - ls -R /valohai/inputs/ 
         - python -m src.Models.SingleSizeModel
