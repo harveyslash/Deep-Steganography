@@ -243,7 +243,7 @@ class SingleSizeModel():
             
         
 m = SingleSizeModel(beta=.75,log_path="/tmp/lol/exp_2")
-m.load_chkp("/home/harsh/ml/Stegano/checkpoints/beta_0.75.chkp-102192")
+# m.load_chkp("/home/harsh/ml/Stegano/checkpoints/beta_0.75.chkp-102192")
 files_list = glob.glob("/home/harsh/ml/Stegano/data/train/"+"**/*")
 m.train(100,files_list,8)
 # print(files_list)
