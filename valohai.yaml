@@ -7,5 +7,5 @@
     command: 
         - nvidia-smi
         - python --version
-        - tar -xvf /inputs/imagenet-sample-train.tar.gz
-        - ls /inputs/ 
+        - tar -xvf /inputs/training-set-images/imagenet-sample-train.tar.gz
+        - ls -R /inputs/ 
