@@ -9,3 +9,4 @@
         - python --version
         - tar -xf /valohai/inputs/training-set-images/imagenet-sample-train.tar.gz
         - ls -R /valohai/inputs/ 
+        - python -m src.Models.SingleSizeModel
