@@ -1,6 +1,11 @@
 - step:
     name: Hardware check
     image: gcr.io/tensorflow/tensorflow:1.4.1-gpu-py3
+    inputs: 
+        - name: training-set-images
+        default: http://files.fast.ai/data/imagenet-sample-train.tar.gz
     command: 
         - nvidia-smi
         - python --version
+        - tar -xvf /inputs/imagenet-sample-train.tar.gz
+        - ls /inputs/ 
