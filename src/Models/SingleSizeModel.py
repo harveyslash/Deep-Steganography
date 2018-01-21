@@ -245,10 +245,11 @@ class SingleSizeModel():
 m = SingleSizeModel(beta=.25,log_path="/valohai/outputs/")
 # m.load_chkp("/home/harsh/ml/Stegano/checkpoints/beta_0.75.chkp-102192")
 files_list = glob.glob("/valohai/inputs/training-set-images/train/"+"**/*")
-print(files_list)
+# print(files_list)
 for i in range(100):
     m.make_chkp('/valohai/outputs/beta_.25.chkp')
-    m.train(1000,files_list,32)
+    m.train(1000,files_list,16)
+    print("Saved")
 
 # print(files_list)
 
