@@ -11,4 +11,4 @@
         - cd /valohai/inputs/training-set-images && tar -xf /valohai/inputs/training-set-images/imagenet-sample-train.tar.gz
         - touch /valohai/inputs/testging ; ls /valohai/inputs
         - echo "ECHOING \n" ; ls  /valohai/inputs/training-set-images/
-        #- python -m src.Models.SingleSizeModel
+        - python -m src.Models.SingleSizeModel
