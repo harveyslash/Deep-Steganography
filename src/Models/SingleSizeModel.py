@@ -248,7 +248,7 @@ files_list = glob.glob("/valohai/inputs/training-set-images/train/"+"**/*")
 # print(files_list)
 for i in range(100):
     m.make_chkp('/valohai/outputs/beta_.25.chkp')
-    m.train(1000,files_list,16)
+    m.train(1000,files_list,8)
     print("Saved")
 
 # print(files_list)
