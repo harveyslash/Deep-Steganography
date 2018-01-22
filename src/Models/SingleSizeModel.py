@@ -210,24 +210,22 @@ class SingleSizeModel():
 
         self.covered_tensor = tf.placeholder(shape=input_shape,dtype=tf.float32,name="deploy_covered")
         self.deploy_hide_image_op , self.deploy_reveal_image_op = self.prepare_deployment_graph(self.secret_tensor,self.cover_tensor,self.covered_tensor)
+        self.saver = tf.train.Saver(max_to_keep=1)
         self.sess.run(tf.global_variables_initializer())
         
         print("OK")
     
     def make_chkp(self,path):
-        saver = tf.train.Saver(max_to_keep=1)
         global_step = self.sess.run(self.global_step_tensor)
-        saver.save(self.sess,path,global_step)
+        self.saver.save(self.sess,path,global_step)
 
     def load_chkp(self,path):
-        saver = tf.train.Saver(max_to_keep=1)
         global_step = self.sess.run(self.global_step_tensor)
         print("LOADED")
-        saver.restore(self.sess,path)
+        self.saver.restore(self.sess,path)
         
         
     def train(self,steps,files_list,batch_size):
-        
 
         for step in range(steps):
             covers,secrets = get_img_batch(files_list=files_list,batch_size=batch_size)
@@ -238,8 +236,6 @@ class SingleSizeModel():
                 self.writer.add_summary(summary,global_step)
 
 
-                
-            
         
 m = SingleSizeModel(beta=.25,log_path="/valohai/outputs/")
 # m.load_chkp("/home/harsh/ml/Stegano/checkpoints/beta_0.75.chkp-102192")
@@ -247,7 +243,7 @@ files_list = glob.glob("/valohai/inputs/training-set-images/train/"+"**/*")
 # print(files_list)
 for i in range(100):
     m.make_chkp('/valohai/outputs/beta_.25.chkp')
-    m.train(1000,files_list,8)
+    m.train(300,files_list,8)
     print("Saved")
 
 # print(files_list)
