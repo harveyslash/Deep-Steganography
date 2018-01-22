@@ -230,7 +230,6 @@ class SingleSizeModel():
         
 
         for step in range(steps):
-            saver = tf.train.Saver(max_to_keep=1)
             covers,secrets = get_img_batch(files_list=files_list,batch_size=batch_size)
             self.sess.run([self.train_op],feed_dict={"input_prep:0":secrets,"input_hide:0":covers})
             
