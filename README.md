@@ -38,3 +38,20 @@ As you can see, it is visually very hard to realise that the covered image is an
 ### Architecture 
 ![network_design](_images/network_diagram.png)
 Prep Net, Hide Net , and Reveal net have the same convolutional block structure. Therefore, in the image , only the reveal network is shown, and prep/hide networks are collapsed (to make the image fit).  
+
+### Loss Curves
+Two networks were trained with different beta values (0.25 and .75).Both had a batch size of 8. The loss curves are shown for them:
+Beta = .25
+![beta .25](_images/loss_beta_0.25.png)
+
+Beta = .75
+![beta .75](_images/loss_beta_.75.png)
+
+
+## Demo: 
+
+In order to test the working of the networks , we have written a browser inplementation using Keras JS. 
+You can find it here: 
+
+https://harveyslash.github.io/Deep-Steg-JS/
+Due to the extremely high computational resources that it requires, it takes about 3 minutes to setup. 
