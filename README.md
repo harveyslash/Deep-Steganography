@@ -4,7 +4,7 @@ Tensorflow Implementation of [Hiding Images in Plain Sight: Deep Steganography](
 
 [Steganography](https://en.wikipedia.org/wiki/Steganography) is the science of Hiding a message in another message. In this case, a Picture is hidden inside another picture using Deep Learning.
 
-
+Blog Post on it can be found [here](https://buzzrobot.com/hiding-images-using-ai-deep-steganography-b7726bd58b06)
 
 ## Dependencies Installation 
 The dependencies can be installed by using 
