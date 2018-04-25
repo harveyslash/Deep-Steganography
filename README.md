@@ -19,8 +19,6 @@ pip install --force-reinstall tensorflow-gpu
 This basically reinstalls the gpu version of tensorflow for your system. 
 
 
-### Currently a WIP(I only have a measly 1070 and results/benchmarks are taking time :( ) 
-
 
 ## Framework
 The Framework takes in Two images. One is the secret image(extreme right) and another is the cover image(extreme left). 
